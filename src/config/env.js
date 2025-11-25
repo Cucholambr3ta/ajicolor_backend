@@ -1,8 +1,10 @@
 const dotenv = require('dotenv');
 const path = require('path');
 
-// Load environment variables
-dotenv.config({ path: path.join(__dirname, '../../.env') });
+// Load environment variables only if not in production
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config({ path: path.join(__dirname, '../../.env') });
+}
 
 // Validation function
 const validateEnv = () => {
@@ -24,19 +26,26 @@ const validateEnv = () => {
   const missing = critical.filter((key) => !required[key]);
 
   if (missing.length > 0) {
-    console.error("❌ CRITICAL: Missing required environment variables:");
-    missing.forEach((key) => console.error(`   - ${key}`));
-    console.error("\nPlease create a .env file based on .env.example");
-    process.exit(1);
+    const errorMsg = `Missing required environment variables: ${missing.join(', ')}`;
+    if (process.env.NODE_ENV !== 'production') {
+      console.error("❌ CRITICAL:", errorMsg);
+      console.error("\nPlease create a .env file based on .env.example");
+      process.exit(1);
+    } else {
+      // In production (Vercel), throw error but don't process.exit
+      throw new Error(errorMsg);
+    }
   }
 
   // Validate JWT secret strength
   if (required.JWT_SECRET && required.JWT_SECRET.length < 32) {
-    console.error("❌ FATAL: JWT_SECRET is too weak! Must be 32+ characters.");
-    console.error(
-      `   Current length: ${required.JWT_SECRET.length} characters`
-    );
-    process.exit(1);
+    const errorMsg = `JWT_SECRET is too weak! Must be 32+ characters. Current length: ${required.JWT_SECRET.length}`;
+    if (process.env.NODE_ENV !== 'production') {
+      console.error("❌ FATAL:", errorMsg);
+      process.exit(1);
+    } else {
+      throw new Error(errorMsg);
+    }
   }
 
   // Warn about defaults
