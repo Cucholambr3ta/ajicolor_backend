@@ -12,6 +12,14 @@ const connectDB = async () => {
     logger.info(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     logger.error(`MongoDB Connection Error: ${error.message}`);
+
+    // En serverless, no usar process.exit ya que mata la función
+    // Lanzar el error para que el error handler de Express lo maneje
+    if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME) {
+      throw error;
+    }
+
+    // En desarrollo local, sí podemos usar exit
     process.exit(1);
   }
 };

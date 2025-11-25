@@ -1,23 +1,36 @@
 const winston = require('winston');
 
+// Detectar si estamos en un entorno serverless (Vercel, AWS Lambda, etc.)
+const isServerless = process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.FUNCTION_NAME;
+
 const logger = winston.createLogger({
-  level: 'info',
+  level: process.env.LOG_LEVEL || 'info',
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.json()
   ),
   defaultMeta: { service: 'app-poleras-backend' },
-  transports: [
-    // Write all logs with importance level of `error` or less to `error.log`
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
-    // Write all logs with importance level of `info` or less to `combined.log`
-    new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
+  transports: [],
 });
 
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-if (process.env.NODE_ENV !== 'production') {
+// En entornos serverless o producción, solo usar console (stdout/stderr)
+// Vercel captura automáticamente los logs de console
+if (process.env.NODE_ENV === 'production' || isServerless) {
+  logger.add(new winston.transports.Console({
+    format: winston.format.combine(
+      winston.format.timestamp(),
+      winston.format.json()
+    ),
+  }));
+} else {
+  // En desarrollo, usar tanto archivos como consola
+  logger.add(new winston.transports.File({ 
+    filename: 'logs/error.log', 
+    level: 'error' 
+  }));
+  logger.add(new winston.transports.File({ 
+    filename: 'logs/combined.log' 
+  }));
   logger.add(new winston.transports.Console({
     format: winston.format.simple(),
   }));
