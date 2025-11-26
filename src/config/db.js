@@ -1,27 +1,43 @@
 const mongoose = require('mongoose');
 const logger = require("../utils/logger");
 
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
+
 const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+  if (cached.conn) {
+    logger.info("MongoDB Connected: Using Cached Connection");
+    return cached.conn;
+  }
+
+  if (!cached.promise) {
+    const opts = {
       autoIndex: process.env.NODE_ENV !== "production",
       serverSelectionTimeoutMS: 5000,
       socketTimeoutMS: 45000,
-    });
+      bufferCommands: false, // Disable mongoose buffering
+    };
 
-    logger.info(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    logger.error(`MongoDB Connection Error: ${error.message}`);
-
-    // En serverless, no usar process.exit ya que mata la función
-    // Lanzar el error para que el error handler de Express lo maneje
-    if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME) {
-      throw error;
-    }
-
-    // En desarrollo local, sí podemos usar exit
-    process.exit(1);
+    logger.info("MongoDB Connected: Creating New Connection");
+    cached.promise = mongoose
+      .connect(process.env.MONGO_URI, opts)
+      .then((mongoose) => {
+        return mongoose;
+      });
   }
+
+  try {
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    logger.error(`MongoDB Connection Error: ${e.message}`);
+    throw e;
+  }
+
+  return cached.conn;
 };
 
 module.exports = connectDB;
