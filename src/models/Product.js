@@ -68,6 +68,7 @@ const productSchema = new mongoose.Schema(
 
 // Indexes for performance
 productSchema.index({ categoria: 1 });
+productSchema.index({ precio: 1 }); // Optimize sorting by price
 productSchema.index({ nombre: "text", descripcion: "text" });
 
 const Product = mongoose.model('Product', productSchema);

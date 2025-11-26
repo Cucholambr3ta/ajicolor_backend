@@ -1,0 +1,254 @@
+[
+  {
+    "id": "prod_001",
+    "nombre": "Polera Beastie Boys",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_beastie_boys.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_002",
+    "nombre": "Polera Chancho En Piedra",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_chancho_en_piedra.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_003",
+    "nombre": "Polera Chancho En Piedra Voy Y Vuelvo",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_chancho_en_piedra_voy_y_vuelvo.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_004",
+    "nombre": "Polera Deftones",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_deftones.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_005",
+    "nombre": "Polera Faith No More",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_faith_no_more.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_006",
+    "nombre": "Polera Foo Fighters",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_foof_fighters.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_007",
+    "nombre": "Polera Idles",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_idles.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_008",
+    "nombre": "Polera Incubus",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_incubus.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_009",
+    "nombre": "Polera Jamiroquai",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_jamiroquai.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_010",
+    "nombre": "Polera Los Tetas",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_los_tetas.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_011",
+    "nombre": "Polera Makiza",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_makiza.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_012",
+    "nombre": "Polera Mr Bungle",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_mr_bungle.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_013",
+    "nombre": "Polera Prince",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_prince.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_014",
+    "nombre": "Polera Rage Against The Machine",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_rage_against_the_machine.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_015",
+    "nombre": "Polera Red Hot Chili Peppers",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_red_hot_chili_peppers.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_016",
+    "nombre": "Polera Silk Sonic",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_silk_sonic.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_017",
+    "nombre": "Polera System Of A Down",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_system_of_a_down.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_018",
+    "nombre": "Polera The Mars Volta",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_the_mars_volta.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_019",
+    "nombre": "Polera The Police",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_the_police.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_020",
+    "nombre": "Polera Tiro De Gracia",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_tiro_de_gracia.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_021",
+    "nombre": "Polera Tool",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_tool.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_022",
+    "nombre": "Polera Twenty One Pilots",
+    "descripcion": "Polera diseño personalizado\\n**Material:** Algodón",
+    "precio": 15000,
+    "categoria": "SERIGRAFIA",
+    "imageFilename": "polera_twenty_one_pilots.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_dtf_001",
+    "nombre": "Polera DTF Beastie Boys",
+    "descripcion": "Polera con diseño personalizado en DTF\\n**Material:** Algodón\\n**Técnica:** Digital Transfer Film",
+    "precio": 18000,
+    "categoria": "DTF",
+    "imageFilename": "polera_beastie_boys.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_dtf_002",
+    "nombre": "Polera DTF Chancho En Piedra",
+    "descripcion": "Polera con diseño personalizado en DTF\\n**Material:** Algodón\\n**Técnica:** Digital Transfer Film",
+    "precio": 18000,
+    "categoria": "DTF",
+    "imageFilename": "polera_chancho_en_piedra.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_dtf_003",
+    "nombre": "Polera DTF Deftones",
+    "descripcion": "Polera con diseño personalizado en DTF\\n**Material:** Algodón\\n**Técnica:** Digital Transfer Film",
+    "precio": 18000,
+    "categoria": "DTF",
+    "imageFilename": "polera_deftones.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_dtf_004",
+    "nombre": "Polera DTF Incubus",
+    "descripcion": "Polera con diseño personalizado en DTF\\n**Material:** Algodón\\n**Técnica:** Digital Transfer Film",
+    "precio": 18000,
+    "categoria": "DTF",
+    "imageFilename": "polera_incubus.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_dtf_005",
+    "nombre": "Polera DTF Tool",
+    "descripcion": "Polera con diseño personalizado en DTF\\n**Material:** Algodón\\n**Técnica:** Digital Transfer Film",
+    "precio": 18000,
+    "categoria": "DTF",
+    "imageFilename": "polera_tool.png",
+    "stock": 0
+  },
+  {
+    "id": "prod_023",
+    "nombre": "Jockey Genérico",
+    "descripcion": "Jockey generico",
+    "precio": 8000,
+    "categoria": "ACCESORIOS",
+    "imageFilename": "jockey.png",
+    "stock": 0
+  }
+]

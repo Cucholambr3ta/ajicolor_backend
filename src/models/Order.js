@@ -91,6 +91,7 @@ const orderSchema = new mongoose.Schema(
 // Indexes for performance
 // Note: numeroPedido index created automatically by unique: true
 orderSchema.index({ usuario: 1, estado: 1 });
+orderSchema.index({ createdAt: -1 }); // Optimize "Recent Orders" queries
 
 const Order = mongoose.model('Order', orderSchema);
 
